@@ -1,0 +1,26 @@
+import fs from 'node:fs/promises';
+import { Workbook, SpreadsheetFile } from '/Users/jiangtiancheng/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@oai/artifact-tool/dist/artifact_tool.mjs';
+
+const csv = (await fs.readFile('/Users/jiangtiancheng/research_data/threads-poc-v03/data/processed/threads_analysis.csv', 'utf8')).replace(/^\uFEFF/, '');
+const wb = await Workbook.fromCSV(csv, { sheetName: 'Threads Analysis' });
+const sh = wb.worksheets.getItem('Threads Analysis');
+const dateValues = sh.getRange('A2:A21').values.map(([v]) => [v ? new Date(v) : null]);
+sh.getRange('A2:A21').values = dateValues;
+const used = sh.getUsedRange();
+used.format.wrapText = true;
+used.format.verticalAlignment = 'center';
+used.format.borders = { preset: 'all', style: 'thin', color: '#D9E2F3' };
+sh.freezePanes.freezeRows(1);
+sh.showGridLines = false;
+const header = sh.getRange('A1:L1');
+header.format.fill = '#1F4E78';
+header.format.font = { bold: true, color: '#FFFFFF' };
+header.format.rowHeight = 30;
+header.format.wrapText = true;
+for (const [col, width] of Object.entries({A:22,B:56,C:10,D:14,E:10,F:12,G:12,H:12,I:12,J:12,K:10,L:42})) sh.getRange(`${col}:${col}`).format.columnWidth = width;
+sh.getRange('A2:A21').format.numberFormat = 'yyyy-mm-dd hh:mm';
+sh.getRange('F2:K21').format.numberFormat = '0';
+sh.tables.add('A1:L21', true, 'ThreadsAnalysis');
+await wb.recalculate();
+const out = await SpreadsheetFile.exportXlsx(wb);
+await out.save('/Users/jiangtiancheng/research_data/threads-poc-v03/data/processed/threads_analysis.xlsx');

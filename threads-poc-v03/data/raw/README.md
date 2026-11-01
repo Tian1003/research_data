@@ -1,0 +1,3 @@
+原始檔案保持在：/Users/jiangtiancheng/research_data/quanlian.json
+SHA256：999ff3e10d1130eac232fcabf0f6e21873a19817faee16656adfba4cef05b8bd
+本次未複製或覆寫原始 JSON。

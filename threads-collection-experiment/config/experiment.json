@@ -1,0 +1,57 @@
+{
+  "experiment_name": "pxmart-preliminary-collection-experiment",
+  "timezone": "Asia/Taipei",
+  "default_mode": "offline",
+  "default_stage": "A",
+  "legacy_bundle": "../threads-poc-v05/output/threads_raw_v05.json",
+  "recorded_batch": "../threads-part2/run_20261031_210039/quanlian_core.json",
+  "recorded_start": "../threads-part2/run_20261031_210039/search_start_utc.txt",
+  "recorded_finish": "../threads-part2/run_20261031_210039/search_finish_utc.txt",
+  "tool": {
+    "name": "ckelepel-threads",
+    "package_version": "0.1.1",
+    "exported_version": "0.1.0",
+    "git_commit": "d4a18e5dfe65ab69ce4bcad167e54446ff9c9912",
+    "installed_path": "/Users/jiangtiancheng/.npm/_npx/09fc6e019ea9bb5b/node_modules/ckelepel-threads",
+    "node_binary": "/Users/jiangtiancheng/.nvm/versions/node/v22.23.4/bin/node",
+    "sha256": {
+      "src/scraper.js": "cdec14a131d4d2cbb721ccde605fa9eec15518ccf2a4aff0d449d118eaf2a1e0",
+      "src/http.js": "70082cb67c167fa6ca90ad99f107fa5bc37330851459342fa5618a7778a6768e",
+      "src/normalizers.js": "345e684d3e79f30c70fde30531cb608491cd7ea0acc79b5f9cee67f9c08658ec",
+      "bin/ckelepel.js": "f99b66dad3fd3b956abc859754cf98cbe1ab1edb6924354c3cc7cde1bcdbcf91",
+      "package.json": "f1d822b23b9967a991b0d8c9f675d9452d0988e0b1b1e6bcdd1f91f3154bc21c"
+    }
+  },
+  "authorization": {
+    "status": "not_approved",
+    "approved_methods": [],
+    "evidence_file": null,
+    "valid_until_utc": null,
+    "note": "使用者明確表示目前沒有已確認核准的 Threads 大量公開搜尋權限；既有批次並非本流程的新蒐集授權。官方 API scope 不能用來授權非官方 HTML/GraphQL 工具。"
+  },
+  "keywords": {
+    "core": ["全聯", "全聯福利中心", "pxmart", "#全聯"],
+    "extended": ["全聯商品", "全聯門市", "全聯小時達", "全聯客服", "全聯價格", "全聯服務"],
+    "context": ["超市", "量販店", "生鮮超市"]
+  },
+  "stages": {
+    "A": {"keywords": "core", "limit_per_query": 20, "max_queries": 4, "max_http_requests": 24, "max_http_per_query": 6, "max_new_candidate_ids": 80},
+    "B": {"keywords": "extended", "limit_per_query": 50, "max_queries": 6, "max_http_requests": 36, "max_http_per_query": 6, "max_new_candidate_ids": 300, "requires_stage_a_pass": true, "min_human_confirmed_records": 5, "release_evidence_file": null, "exploration_targets": [100, 300, 500]},
+    "C": {"design_only": true, "scheduler_installed": false, "suggested_interval_minutes": 60, "requires_authorized_source": true},
+    "context": {"keywords": "context", "limit_per_query": 10, "max_queries": 3, "max_http_requests": 18, "max_http_per_query": 6, "max_new_candidate_ids": 30}
+  },
+  "stopping": {
+    "minimum_http_interval_seconds": 5,
+    "minimum_query_interval_seconds": 10,
+    "query_timeout_seconds": 90,
+    "single_http_timeout_seconds": 20,
+    "max_response_bytes": 5000000,
+    "consecutive_zero_new_brand_queries": 2,
+    "min_valid_brand_fraction": 0.2,
+    "max_uncertain_fraction": 0.5,
+    "stop_http_statuses": [401, 403, 429],
+    "automatic_retry": false,
+    "automatic_topic_expansion": false,
+    "concurrency": 1
+  }
+}

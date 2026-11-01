@@ -1,0 +1,2 @@
+﻿run_id,input_path,query,collected_at,post_count,reply_count,duplicate_count,notes
+quanlian-offline-poc,quanlian.json,全聯,2026-10-31T08:49:02.601045+00:00,20,0,0,offline normalization; no reply payload

@@ -1,0 +1,14 @@
+{
+  "run_started_at_utc": "2026-10-31T12:19:14+00:00",
+  "reference_timezone": "Asia/Taipei",
+  "authorization_status": "not_approved",
+  "authorization_evidence": "使用者於本輪確認：尚無正式核准的公開搜尋權限或授權資料來源",
+  "brand": "全聯",
+  "keywords": ["全聯", "全聯福利中心", "pxmart", "#全聯"],
+  "bounded_test": {"max_search_requests": 4, "limit_per_search": 15, "max_reply_posts": 2, "limit_per_reply_post": 10, "max_http_requests": 6, "automatic_pagination": false, "automatic_retry": false, "minimum_interval_seconds": 5},
+  "approved_api_permissions": [],
+  "app_review_approved": false,
+  "research_use_approved": false,
+  "reply_access_approved_ids": [],
+  "token_env_name": "THREADS_ACCESS_TOKEN"
+}

@@ -1,0 +1,22 @@
+{
+  "criterion_version": "pxmart-brand-discussion-text-audit-1",
+  "reviewer_type": "assistant_text_review",
+  "human_confirmed": false,
+  "definition": {
+    "direct": "文字可辨識為全聯的商品、價格、促銷、服務或官方資訊；情緒待定仍可品牌相關",
+    "related": "全聯門市／品牌相關背景，但主要情緒可能針對別的商家；獨立列示",
+    "context_only": "全聯僅作地點或採購背景，主要行為／抱怨對象並非全聯",
+    "uncertain": "只有短句、標籤或圖片脈絡，文字不足以確認品牌討論意義"
+  },
+  "overrides": {
+    "4011668960441523379": {"brand_relevance": "uncertain", "reason": "僅稱全聯不敢回答這題，缺少圖片／問題脈絡", "sentiment_target": "unknown"},
+    "3999799143245127080": {"brand_relevance": "uncertain", "reason": "不演了的短句可能為反諷或圖片梗，尚無可確認的議題", "sentiment_target": "unknown"},
+    "4019457419885405557": {"brand_relevance": "related", "reason": "提及全聯門市關閉但主要在討論寶雅與林口商圈；不將寶雅負評轉為全聯負評", "sentiment_target": "寶雅／林口商圈"},
+    "4019468788639407482": {"brand_relevance": "context_only", "reason": "食物購自全聯只是背景，抱怨對象為淡江大學冰箱管理與志工", "sentiment_target": "淡江大學冰箱管理／志工"},
+    "4011400987004611332": {"brand_relevance": "uncertain", "reason": "全聯人生短句需要圖片或作者語境", "sentiment_target": "unknown"},
+    "4019437810592506846": {"brand_relevance": "context_only", "reason": "全聯只是唱歌邀約的等候地點，不是商品、服務或品牌評價", "sentiment_target": "唱歌邀約"},
+    "4020011414958323669": {"brand_relevance": "context_only", "reason": "全聯門口是發飄帶集合地點，主要內容為活動招募", "sentiment_target": "活動招募"},
+    "4012623753071100720": {"brand_relevance": "uncertain", "reason": "滷肉／開心的雙關配上全聯標籤，需要圖片辨識商品與語境", "sentiment_target": "unknown"},
+    "3861698387766328242": {"brand_relevance": "uncertain", "reason": "主要分享口湖小吃，只在標籤提到全聯，無明確品牌連結", "sentiment_target": "地方小吃"}
+  }
+}

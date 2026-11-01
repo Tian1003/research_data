@@ -1,0 +1,2 @@
+﻿run_id,run_started_at,run_ended_at,timezone,input_file,input_sha256,source_platform,collector_tool,collector_version,retrieval_method,recent_search_verified,network_requests_made,search_keywords,window_start,window_end
+offline_20261031_0000,2026-10-31T00:00:00+08:00,2026-10-31T00:00:00+08:00,Asia/Taipei,quanlian.json,264784810597421c3f8beedd8b81a5226c06805eae447a139701cbb45064333a,Threads,ckelepel-threads,0.1.1,offline-normalization-of-existing-search-json,False,0,['全聯'],2026-10-30T12:00:00+08:00,2026-10-31T00:00:00+08:00

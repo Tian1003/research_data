@@ -1,0 +1,28 @@
+{
+  "planned_at_utc": "2026-10-31T12:33:56.805857+00:00",
+  "network_executed": false,
+  "status": "BLOCKED",
+  "blocking_reasons": [
+    "permission_not_confirmed:threads_keyword_search",
+    "research_use_not_confirmed",
+    "local_approval_evidence_ref_missing",
+    "public_keyword_search_app_review_not_approved",
+    "environment_token_missing"
+  ],
+  "mode": "search",
+  "method": "GET",
+  "host": "graph.threads.net",
+  "endpoint": "keyword_search",
+  "params": {
+    "fields": "id,text,timestamp,permalink",
+    "limit": "15",
+    "q": "全聯",
+    "search_type": "TOP"
+  },
+  "request_budget": 1,
+  "automatic_pagination": false,
+  "automatic_retry": false,
+  "authorization_in_env_only": true,
+  "record_received_time_as_observation": true,
+  "note": "TOP is in Meta official Postman sample. RECENT/date parameters remain unverified here."
+}

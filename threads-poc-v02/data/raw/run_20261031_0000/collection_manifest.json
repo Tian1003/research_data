@@ -1,0 +1,19 @@
+{
+  "run_id": "offline_20261031_0000",
+  "run_started_at": "2026-10-31T00:00:00+08:00",
+  "run_ended_at": "2026-10-31T00:00:00+08:00",
+  "timezone": "Asia/Taipei",
+  "input_file": "quanlian.json",
+  "input_sha256": "264784810597421c3f8beedd8b81a5226c06805eae447a139701cbb45064333a",
+  "source_platform": "Threads",
+  "collector_tool": "ckelepel-threads",
+  "collector_version": "0.1.1",
+  "retrieval_method": "offline-normalization-of-existing-search-json",
+  "recent_search_verified": false,
+  "network_requests_made": 0,
+  "search_keywords": [
+    "全聯"
+  ],
+  "window_start": "2026-10-30T12:00:00+08:00",
+  "window_end": "2026-10-31T00:00:00+08:00"
+}

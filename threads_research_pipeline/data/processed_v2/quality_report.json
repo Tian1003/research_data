@@ -1,0 +1,38 @@
+{
+  "input": "quanlian.json",
+  "status": "ok",
+  "query": "全聯",
+  "declared_count": 20,
+  "normalized_posts": 20,
+  "duplicate_ids": 0,
+  "unique_authors": 20,
+  "missing_by_field": {
+    "event_id": 20,
+    "post_id": 0,
+    "parent_post_id": 20,
+    "root_post_id": 0,
+    "author_id": 0,
+    "text": 0,
+    "published_at_utc": 0,
+    "published_at_taipei": 0,
+    "collected_at": 0,
+    "source_url": 0,
+    "search_keyword": 0,
+    "is_reply": 0,
+    "like_count": 0,
+    "reply_count": 0,
+    "repost_count": 0,
+    "quote_count": 0,
+    "data_source": 0
+  },
+  "date_min_utc": "2025-05-01T15:31:52+00:00",
+  "date_max_utc": "2026-10-30T12:23:50+00:00",
+  "posts_with_positive_reply_count": 19,
+  "reply_records_collected": 0,
+  "limitations": [
+    "search result is not a complete time series",
+    "reply_count is not reply text",
+    "no date filter was present",
+    "engagement metrics are collection-time cumulative values"
+  ]
+}
